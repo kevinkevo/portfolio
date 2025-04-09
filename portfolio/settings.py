@@ -71,12 +71,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 # Database
-# Use the Railway PostgreSQL DATABASE_URL
+# Database
+DATABASE_URL = os.getenv('DATABASE_URL')
+
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL'),  # Railway provides this
-        conn_max_age=600
-    )
+    'default': dj_database_url.parse(DATABASE_URL)
 }
 
 # Password validation
