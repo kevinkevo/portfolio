@@ -19,8 +19,8 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-j!x3f35a^+&d(iyfeno%vq)7_*
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 # Update ALLOWED_HOSTS and CSRF_TRUSTED_ORIGINS for Railway
-ALLOWED_HOSTS = ['*']  # Temporary for deployment; update to your Railway domain later
-CSRF_TRUSTED_ORIGINS = ['https://*.railway.app']  # Adjust based on your Railway domain
+ALLOWED_HOSTS = ['localhost','127.0.0.1','portfolio-production-0752.up.railway.app']  # Temporary for deployment; update to your Railway domain later
+CSRF_TRUSTED_ORIGINS = ['https://portfolio-production-0752.up.railway.app']  # Adjust based on your Railway domain
 
 # Application definition
 INSTALLED_APPS = [
