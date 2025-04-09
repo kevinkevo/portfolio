@@ -129,4 +129,3 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'kevindev002@gmail.com')
 CONTACT_EMAIL = os.getenv('CONTACT_EMAIL', 'kevindev002@gmail.com')
-
