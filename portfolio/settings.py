@@ -9,6 +9,22 @@ import cloudinary.uploader
 import cloudinary.api
 import dj_database_url
 
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('railway'),
+        'USER': os.getenv('postgres'),
+        'PASSWORD': os.getenv('zGrJdyFdeZIvvmrPjCOxvoTeKwooloOr'),
+        'HOST': os.getenv('postgres.railway.internal'),
+        'PORT': os.getenv('5432'),
+    }
+}
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -70,13 +86,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
-# Database
-# Database
-DATABASE_URL = os.getenv('DATABASE_URL')
 
-DATABASES = {
-    'default': dj_database_url.parse(DATABASE_URL)
-}
+
+# Database
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
